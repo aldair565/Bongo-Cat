@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bongo Cat Reloaded</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon"> <!--Insertar icono en titulo de pagina-->
+</head>
+<body>
+    <div>
+        <h1>Bongo Cat Reloaded</h1>
+    </div>
+    <div>
+        <h2>Play the bongos with <kbd data-key="65">A</kbd> and <kbd data-key="68">S</kbd></h2>
+    </div>
+    <div class="bongocat">
+        <img id="maincat" src="/assets/img/catup.png">
+    </div>
+    <audio id="space" src="/assets/sounds/Breakbeat_165.wav" data-key="32" type="audio"></audio>
+    <div class="surprise"><p>Press space for a surprise</p></div>
+    <script>
+        document.addEventListener("keypress", function(e) {
+            if (e.keyCode == 32) {
+                document.getElementById("space").play();
+                document.getElementById("maincat").src="/assets/img/smackthat.gif"
+            }
+        })
+    </script>
+</body>
+</html>
